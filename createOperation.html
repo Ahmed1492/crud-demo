@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container py-3">
+      <h1 class="text-center py-5">CRUD Operation</h1>
+      <label class="ms-3" for="productName">productName</label>
+      <input id="productName" type="text" class="form-control m-3" />
+
+      <label class="ms-3" for="productPrice">productPrice</label>
+      <input id="productPrice" type="number" class="form-control m-3" />
+
+      <label class="ms-3" for="productCategory">productCategory</label>
+      <input id="productCategory" type="text" class="form-control m-3" />
+
+      <label class="ms-3" for="productDesc">productDesc</label>
+      <input id="productDesc" type="text" class="form-control m-3" />
+      <button
+        onclick="handleAdding()"
+        class="btn btn-primary m-auto w-100 ms-3 mt-3 text-white"
+      >
+        Add Product
+      </button>
+      <input
+        onkeyup="handleSearch(this)"
+        type="text"
+        class="form-control my-4"
+        placeholder="Search BY Name"
+      />
+    </div>
+
+    <table class="table w-75 m-auto">
+      <thead>
+        <th>index</th>
+        <th>name</th>
+        <th>desc</th>
+        <th>category</th>
+        <th>price</th>
+        <th>Updata</th>
+        <th>delete</th>
+      </thead>
+      <tbody id="table"></tbody>
+    </table>
+
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="createPeration.js"></script>
+  </body>
+</html>
